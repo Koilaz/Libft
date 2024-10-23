@@ -1,34 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lmarck <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/19 12:52:26 by lmarck            #+#    #+#             */
-/*   Updated: 2024/10/21 20:32:05 by lmarck           ###   ########.fr       */
+/*   Created: 2024/10/18 20:18:41 by lmarck            #+#    #+#             */
+/*   Updated: 2024/10/21 20:33:06 by lmarck           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <stdio.h>
-//#include <stdlib.h>
 
-int	ft_tolower( int character )
+int	ft_isdigit(int character)
 {
-	if (character >= 65 && character <= 90)
-		character = character + 32;
-	return (character);
+	if (character >= '0' && character <= '9')
+		return (1);
+	else
+		return (0);
 }
-/*int main()
-{
-    int i = 0;
-    char *str = "WOLOLOLO !! \0";
-    while (str[i])
-    {
-        printf("%c" , ft_tolower (str[i]));
-        i++;
-    }
-    printf("\n");
-    return 0;
-}*/

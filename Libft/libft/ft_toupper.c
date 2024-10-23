@@ -6,18 +6,19 @@
 /*   By: lmarck <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 11:26:00 by lmarck            #+#    #+#             */
-/*   Updated: 2024/10/19 12:50:53 by lmarck           ###   ########.fr       */
+/*   Updated: 2024/10/21 20:31:58 by lmarck           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 //#include <stdio.h>
 //#include <stdlib.h>
 
-int ft_toupper( int character )
+int	ft_toupper( int character )
 {
-    if (character >= 97 && character <= 122)
-        character = character - 32;
-    return character;
+	if (character >= 97 && character <= 122)
+		character = character - 32;
+	return (character);
 }
 /*int main()
 {

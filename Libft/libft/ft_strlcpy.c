@@ -6,16 +6,17 @@
 /*   By: lmarck <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 21:15:35 by lmarck            #+#    #+#             */
-/*   Updated: 2024/07/29 21:15:39 by lmarck           ###   ########.fr       */
+/*   Updated: 2024/10/22 22:28:00 by lmarck           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 //#include<stdio.h>
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
-	unsigned int	i;
-	unsigned int	n;
+	size_t	i;
+	size_t	n;
 
 	n = 0;
 	while (src[n] != '\0')

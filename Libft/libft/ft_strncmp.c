@@ -6,17 +6,22 @@
 /*   By: lmarck <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 14:06:23 by lmarck            #+#    #+#             */
-/*   Updated: 2024/07/30 14:06:30 by lmarck           ###   ########.fr       */
+/*   Updated: 2024/10/22 21:45:54 by lmarck           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<string.h>
-#include<stdio.h>
+#include "libft.h"
+#include <string.h>
+//#include <stdio.h>
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	unsigned int	i;
+	size_t			i;
+	unsigned char	*str1;
+	unsigned char	*str2;
 
+	str1 = (unsigned char *)s1;
+	str2 = (unsigned char *)s2;
 	i = 0;
 	if (n == 0)
 		return (0);
@@ -24,16 +29,15 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 		i++;
 	if (n == i)
 		return (0);
-	return (s1[i] - s2[i]);
+	return (str1[i] - str2[i]);
 }
 /*int main ()
 {
-	int n = 5;
-	char *s1 = "jusqu'ici tout vas bien";
-	char *s2 = "jusqu'ici tout allais bien";
-	char *s3 = "jusqu'ici tout vas bien";
-	char *s4 = "jusqu'ici tout allais bien";
-	printf("ft_strcmp:%d\n",ft_strncmp(s1, s2, n));
-	printf("strcmp:%d\n",strncmp(s3,s4, n));
+	int n = 6;
+	char *s1 = "test\200";
+	char *s2 = "test\0";
+
+	printf("ft_strcmp:\n%d\n",ft_strncmp(s1, s2, n));
+	printf("strcmp:\n%d\n",strncmp(s1, s2, n));
 	return(0);
 }*/

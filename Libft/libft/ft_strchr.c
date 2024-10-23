@@ -1,34 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lmarck <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/19 12:52:26 by lmarck            #+#    #+#             */
-/*   Updated: 2024/10/21 20:32:05 by lmarck           ###   ########.fr       */
+/*   Created: 2024/10/19 13:16:31 by lmarck            #+#    #+#             */
+/*   Updated: 2024/10/21 20:31:43 by lmarck           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 //#include <stdio.h>
-//#include <stdlib.h>
 
-int	ft_tolower( int character )
+char	*ft_strchr( const char *string, int searchedChar )
 {
-	if (character >= 65 && character <= 90)
-		character = character + 32;
-	return (character);
+	int	i;
+
+	i = 0;
+	while (string[i] != '\0')
+	{
+		if (string[i] == (char)searchedChar)
+			return ((char *)&string[i]);
+		i++;
+	}
+	if (searchedChar == '\0')
+		return ((char *)&string[i]);
+	return (NULL);
 }
 /*int main()
 {
-    int i = 0;
-    char *str = "WOLOLOLO !! \0";
-    while (str[i])
-    {
-        printf("%c" , ft_tolower (str[i]));
-        i++;
-    }
-    printf("\n");
+    char * str = "Je suis une racaille, une racaille de shangai";
+    char tofind = ',';
+    printf ("%s\n", ft_strchr(str, tofind));
     return 0;
 }*/
