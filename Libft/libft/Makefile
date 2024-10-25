@@ -6,7 +6,7 @@
 #    By: lmarck <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/21 20:46:04 by lmarck            #+#    #+#              #
-#    Updated: 2024/10/21 21:08:01 by lmarck           ###   ########.fr        #
+#    Updated: 2024/10/25 13:41:51 by lmarck           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,6 +30,19 @@ ft_strnstr.c\
 ft_strrchr.c\
 ft_tolower.c\
 ft_toupper.c\
+ft_calloc.c\
+ft_strdup.c\
+ft_substr.c\
+ft_strjoin.c\
+ft_strtrim.c\
+ft_split.c\
+ft_itoa.c\
+ft_strmapi.c\
+ft_striteri.c\
+ft_putchar_fd.c\
+ft_putstr_fd.c\
+ft_putendl_fd.c\
+ft_putnbr_fd.c\
 
 OBJS	=		${SRCS:.c=.o}
 

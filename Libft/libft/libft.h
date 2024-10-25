@@ -6,7 +6,7 @@
 /*   By: lmarck <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 20:46:26 by lmarck            #+#    #+#             */
-/*   Updated: 2024/10/22 22:53:07 by lmarck           ###   ########.fr       */
+/*   Updated: 2024/10/25 13:41:36 by lmarck           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@
 # include <stddef.h>
 # include <bsd/bitstring.h>
 
-//Part1
-
 void			ft_bzero(void *ptr, size_t n);
 int				ft_atoi(const char *str);
 int				ft_toupper( int character );
@@ -32,6 +30,7 @@ void			*ft_memset( void *pointer, int value, size_t count);
 void			*ft_memmove( void *dest, const void *src, size_t n);
 int				ft_memcmp( const void *ptr1, const void *ptr2, size_t size );
 void			*ft_memchr( const void *mblk, int sdchr, size_t size );
+void			*ft_calloc(size_t nmemb, size_t size);
 //is
 int				ft_isdigit(int character);
 int				ft_isascii(int character);
@@ -45,5 +44,17 @@ size_t			ft_strlen(const char *theString);
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
 char			*ft_strnstr(const char *big, const char *lit, size_t len);
 char			*ft_strrchr( const char *string, int searchedChar);
+char			*ft_strdup(const char *src);
+char			*ft_substr(char const *s, unsigned int start, size_t len);
+char			*ft_strjoin(char const *s1, char const *s2);
+char			*ft_strtrim(char const *s1, char const *set);
+char			**ft_split(char const *s, char c);
+char			*ft_itoa(int n);
+char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void			ft_striteri(char *s, void (*f)(unsigned int, char*));
+void			ft_putchar_fd(char c, int fd);
+void			ft_putstr_fd(char *s, int fd);
+void			ft_putendl_fd(char *s, int fd);
+void			ft_putnbr_fd(int n, int fd);
 
 #endif
